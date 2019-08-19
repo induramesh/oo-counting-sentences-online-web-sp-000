@@ -15,7 +15,8 @@ class String
   end
 
   def count_sentences
-    sentences = self.split(/[.?!]/)
-    
+    #split by punctuation & select for non-empty strings
+    sentences = self.split(/[.?!]/).select{|string| string.length > 0}
+    sentences.length
   end
 end
